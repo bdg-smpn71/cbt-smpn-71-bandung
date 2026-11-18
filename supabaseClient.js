@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- * CBT SIGMA 71 PUSPENDIK — SUPABASE CLIENT & INTEGRATION ENGINE
+ * CBT SMP NEGERI 71 BANDUNG — SUPABASE CLIENT & INTEGRATION ENGINE
  * Mendukung Koneksi Browser Standar, Publishable Key & Multi-Device / Kodular
  * Sinkron 100% dengan supabase/schema.sql & index.html
  * ============================================================================
@@ -18,9 +18,9 @@
 
   // KONFIGURASI UTAMA SUPABASE (MENDUKUNG PUBLISHABLE KEY & MULTI-DEVICE / KODULAR)
   const DEFAULT_CONFIG = {
-    url: 'https://gekubioxgyqqzvswxujy.supabase.co',
-    anonKey: 'sb_publishable_17aStgaM9FI__bVC6A7bnQ_GUDkXjUN',
-    publishableKey: 'sb_publishable_17aStgaM9FI__bVC6A7bnQ_GUDkXjUN',
+    url: 'https://lyfgwwmmubbusheavoyl.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5Zmd3d21tdWJidXNoZWF2b3lsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQ1NzQxNDYsImV4cCI6MjExMDE1MDE0Nn0.jv2tpfGPCv08unG9JYZMkw1ns_CLNdvlD0jravWp9XM',
+    publishableKey: 'sb_publishable_yCs4baUGsayQGSKT2ovDRg_hBBq1Aip',
     isConnected: true
   };
 
