@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- * SERVICE WORKER — CBT SIGMA 71 SMP NEGERI 71 BANDUNG (NETWORK-FIRST PWA)
+ * SERVICE WORKER — CBT SMP NEGERI 71 BANDUNG (NETWORK-FIRST PWA)
  * Mendukung GitHub Pages (subpath /cbt-smpn-71-bandung/), Vercel, Cloudflare,
  * dan Custom Domain (smpn71bandung.my.id) pada Android 8.0+, iOS, & Desktop.
  * ============================================================================
