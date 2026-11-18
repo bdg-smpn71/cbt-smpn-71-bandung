@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- * CBT SIGMA 71 — PWA INSTALLER, CACHE-BUSTER & OFFLINE SYNC QUEUE
+ * CBT SMP NEGERI 71 BANDUNG — PWA INSTALLER, CACHE-BUSTER & OFFLINE SYNC QUEUE
  * Kompatibel dengan GitHub Pages (subpath), Vercel, dan IDwebhost (custom domain)
  * Mendukung Android, Windows, Chrome/Edge Desktop, Safari iOS/iPadOS, HarmonyOS
  * ============================================================================
