@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- * CBT SIGMA 71 PUSPENDIK — SUPABASE EDGE FUNCTION (DENO / TYPESCRIPT)
+ * CBT SMP NEGERI 71 BANDUNG — SUPABASE EDGE FUNCTION (DENO / TYPESCRIPT)
  * Server-Side Logic: 500 Siswa Concurrent, RBAC Validation, Anti-Cheat & Storage
  * ============================================================================
  */
@@ -30,9 +30,9 @@ serve(async (req: Request) => {
   }
 
   const url = new URL(req.url);
-  const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
-  const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
-  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
+  const supabaseUrl = Deno.env.get("SUPABASE_URL") || "https://lyfgwwmmubbusheavoyl.supabase.co";
+  const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5Zmd3d21tdWJidXNoZWF2b3lsIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc5NDU3NDE0NiwiZXhwIjoyMTEwMTUwMTQ2fQ.vhf7GyT3ci64Jms_qc69IuEXGPkN62BYEVsc6LLHWFE";
+  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx5Zmd3d21tdWJidXNoZWF2b3lsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQ1NzQxNDYsImV4cCI6MjExMDE1MDE0Nn0.jv2tpfGPCv08unG9JYZMkw1ns_CLNdvlD0jravWp9XM";
 
   const supabase = createClient(supabaseUrl, supabaseServiceKey || supabaseAnonKey);
 
