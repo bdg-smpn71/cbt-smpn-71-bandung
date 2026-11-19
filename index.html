@@ -1848,7 +1848,7 @@
                                 <table class="w-full text-left text-xs">
                                     <thead>
                                         <tr class="border-b border-slate-200 dark:border-slate-700 text-slate-500">
-                                            <th class="py-3 px-4">ID (NISN/NIP)</th>
+                                            <th class="py-3 px-4">ID (NISN/NIP/NUPTK)</th>
                                             <th class="py-3 px-4">Nama Lengkap</th>
                                             <th class="py-3 px-4">Role</th>
                                             <th class="py-3 px-4">Kelas / Penugasan</th>
@@ -3558,8 +3558,8 @@
                             placeholder="Otomatis menyesuaikan Guru Mapel" class="w-full px-3 py-2 rounded-xl border">
                     </div>
                     <div>
-                        <label class="block font-bold mb-1">NIP Guru / Pengawas:</label>
-                        <input id="baPengawasNipInput" type="text" value="" placeholder="Otomatis menyesuaikan NIP Guru"
+                        <label class="block font-bold mb-1">NIP/NUPTK Guru / Pengawas:</label>
+                        <input id="baPengawasNipInput" type="text" value="" placeholder="Otomatis menyesuaikan NIP/NUPTK Guru"
                             class="w-full px-3 py-2 rounded-xl border font-mono">
                     </div>
                 </div>
@@ -3767,7 +3767,7 @@
                     <div>
                         <h3 class="text-sm font-extrabold text-slate-800 dark:text-white">Import Pengguna Massal via
                             Excel (.xlsx)</h3>
-                        <p class="text-[11px] text-slate-500">Mendukung import data Siswa (NISN) & Guru (NIP/Mapel)
+                        <p class="text-[11px] text-slate-500">Mendukung import data Siswa (NISN) & Guru (NIP/NUPTK/Mapel)
                             secara cepat dan otomatis sinkron.</p>
                     </div>
                 </div>
@@ -3964,7 +3964,7 @@
             users: [],
 
             auditLogs: [
-                { time: new Date().toLocaleString('id-ID'), actor: 'System', role: 'Admin', action: 'SYSTEM_READY', detail: 'Sistem CBT PUSPENDIK siap digunakan. Database bersih siap untuk pelaksanaan ujian resmi.', status: 'SUCCESS' }
+                { time: new Date().toLocaleString('id-ID'), actor: 'System', role: 'Admin', action: 'SYSTEM_READY', detail: 'Sistem CBT SMP NEGERI 71 BANDUNG siap digunakan. Database bersih siap untuk pelaksanaan ujian resmi.', status: 'SUCCESS' }
             ]
         };
 
@@ -4836,7 +4836,7 @@
                 setText('sidebarRoleSubBadge', 'PORTAL GURU • RBAC');
                 setText('activeRoleHeaderText', 'Portal Guru: Belum Ada Akun Guru');
                 setText('topProfileName', 'Guru Mata Pelajaran');
-                setText('topProfileEmail', 'NIP. -');
+                setText('topProfileEmail', 'NIP/NUPTK. -');
                 setText('guruSidebarAssignedInfo', 'Belum ada guru terdaftar');
                 setText('guruHeroName', 'Selamat Pagi, Guru Mata Pelajaran!');
                 setText('guruHeroAssignText', 'Mapel Diampu: - • Kelas Ditugaskan: -');
@@ -5088,8 +5088,8 @@
 
             if (!u || !p) {
                 const msg = !u && !p
-                    ? 'Silakan masukkan Username/NISN/NIP dan Password Anda.'
-                    : (!u ? 'Username / NISN / NIP wajib diisi.' : 'Password wajib diisi.');
+                    ? 'Silakan masukkan Username/NISN/NIP/NUPTK dan Password Anda.'
+                    : (!u ? 'Username / NISN / NIP / NUPTK wajib diisi.' : 'Password wajib diisi.');
                 showLoginErrorAlert(msg);
                 showToast('Login Gagal', msg, 'rose');
                 try { (!u ? uInp : pInp)?.focus(); } catch (_) { }
@@ -5982,10 +5982,10 @@
             'Siti Aminah, S.Pd',
             'Drs. H. Rahmat Hidayat',
             'Nabila Putri, S.Kom',
-            'Budi Santoso, M.Pd (NIP. 198504122010011008)',
-            'Siti Aminah, S.Pd (NIP. 197908212006042001)',
-            'Drs. H. Rahmat Hidayat (NIP. 197003151997021002)',
-            'Nabila Putri, S.Kom (NIP. 199211082019032005)'
+            'Budi Santoso, M.Pd (NIP/NUPTK. 198504122010011008)',
+            'Siti Aminah, S.Pd (NIP/NUPTK. 197908212006042001)',
+            'Drs. H. Rahmat Hidayat (NIP/NUPTK. 197003151997021002)',
+            'Nabila Putri, S.Kom (NIP/NUPTK. 199211082019032005)'
         ];
         const LEGACY_DEMO_USER_IDS = new Set(['0091234501', '0091234502', '0091234503', '198601012010011001', '198702022011012002']);
         const LEGACY_DEMO_USER_NAMES = new Set(['Ahmad Fadilah', 'Siti Zahra Khairunnisa', 'Dimas Aditya Pratama', 'Nama Guru Mapel 1, S.Pd', 'Nama Guru Mapel 2, M.Pd', 'Budi Santoso, M.Pd', 'Siti Aminah, S.Pd', 'Drs. H. Rahmat Hidayat', 'Nabila Putri, S.Kom']);
@@ -11322,7 +11322,7 @@
                 showToast('Template Siswa Diunduh', 'File Template_Import_Siswa_SMPN71.xlsx siap diisi data siswa.', 'emerald');
             } else {
                 const aoa = [
-                    ['NIP', 'Nama Lengkap', 'Username', 'Password', 'Mapel Diampu', 'Kelas Ditugaskan'],
+                    ['NIP/NUPTK', 'Nama Lengkap', 'Username', 'Password', 'Mapel Diampu', 'Kelas Ditugaskan'],
                     ['198601012010011001', 'Nama Guru Mapel 1, S.Pd', 'guru.mapel1', 'guru71pass', 'Informatika', 'VII A, VII B'],
                     ['198702022011012002', 'Nama Guru Mapel 2, M.Pd', 'guru.mapel2', 'guru71pass', 'Bahasa Indonesia', 'VIII A, VIII B']
                 ];
@@ -11409,7 +11409,7 @@
                             `).join('') + (parsedUsersToImport.length > 10 ? `<tr><td colspan="5" class="p-2 text-center text-slate-400 italic">...dan ${parsedUsersToImport.length - 10} baris lainnya</td></tr>` : '');
                         }
                     } else {
-                        if (thead) thead.innerHTML = '<th class="p-2">NIP</th><th class="p-2">Nama Lengkap</th><th class="p-2">Username</th><th class="p-2">Mapel Diampu</th><th class="p-2">Password</th>';
+                        if (thead) thead.innerHTML = '<th class="p-2">NIP/NUPTK</th><th class="p-2">Nama Lengkap</th><th class="p-2">Username</th><th class="p-2">Mapel Diampu</th><th class="p-2">Password</th>';
                         if (tbody) {
                             tbody.innerHTML = parsedUsersToImport.slice(0, 10).map(u => `
                                 <tr>
@@ -11870,7 +11870,7 @@
         function exportUsersExcel() {
             const rows = appState.users.map((u, i) => ({
                 'No': i + 1,
-                'User ID (NISN/NIP)': u.id,
+                'User ID (NISN/NIP/NUPTK)': u.id,
                 'Nama Lengkap': u.name,
                 'Role': u.role,
                 'Kelas / Penugasan': u.className,
